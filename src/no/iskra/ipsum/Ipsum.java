@@ -2,9 +2,11 @@ package no.iskra.ipsum;
 
 final class Ipsum {
   final String str;
+  final String[] punctation;
 
   Ipsum(String str) {
     this.str = str;
+    this.punctation = new String[] {".",",","!","?",":",";"};
   }
 
   public int wordCount() {
@@ -36,7 +38,10 @@ final class Ipsum {
     return str.toUpperCase();
   }
 
-  static String stripPunctation(String s) {
-    return s.replace(".", "").replace(",", "").replace("!", "").replace("?", "").replace(":", "").replace(";", "");
+  String stripPunctation(String s) {
+    for (String p : punctation) {
+      s.replace(p,"");
+    }
+    return s;
   }
 }
