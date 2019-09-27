@@ -16,7 +16,6 @@ final class Ipsum {
     for (String word : str.split("\\s")) {
       word = stripPunctation(word);
       totLen += word.length();
-      //System.out.print(word);
     }
     return (float)totLen / this.wordCount();
   }
@@ -34,7 +33,6 @@ final class Ipsum {
   }
 
   public String getStringUppercase() {
-    //System.out.println(str.toUpperCase());
     return str.toUpperCase();
   }
 

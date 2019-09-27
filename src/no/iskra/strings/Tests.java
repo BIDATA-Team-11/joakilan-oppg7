@@ -37,20 +37,20 @@ class Tests {
   }
 
   static boolean abbreviateTest() {
-    UselessString str = new UselessString("Please abbreviate this text.");
-    String expectedStr = "Patt";
-    System.out.println("Abbreviate: [Please abbreviate this text.]");
-    System.out.println("Expected result: [Patt]");
+    UselessString str = new UselessString("I'm so Meta, even this acronym");
+    String expectedStr = "IsMeta";
+    System.out.println("Abbreviate: [I'm so Meta, even this acronym]");
+    System.out.println("Expected result: [IsMeta]");
     String abbreviatedString = str.abbreviate();
     System.out.println("Actual result: [" + abbreviatedString + "]");
     return abbreviatedString.equals(expectedStr) ? true : false;
   }
 
   static boolean removeSubstringTest() {
-    UselessString str = new UselessString("Please remove all a's from this text.");
-    String expectedStr = "Plese remove ll 's from this text.";
-    System.out.println("Remove 'a' from: [Please remove all a's from this text.]");
-    System.out.println("Expected result: [Plese remove ll 's from this text.]");
+    UselessString str = new UselessString("I'm so Meta, even this acronym");
+    String expectedStr = "I'm so Met, even this cronym";
+    System.out.println("Remove 'a' from: [I'm so Meta, even this acronym]");
+    System.out.println("Expected result: [I'm so Met, even this cronym]");
     String shortenedString = str.removeSubstring("a");
     System.out.println("Actual result: [" + shortenedString + "]");
     return shortenedString.equals(expectedStr) ? true : false;
