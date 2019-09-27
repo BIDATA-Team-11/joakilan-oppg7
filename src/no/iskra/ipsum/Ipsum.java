@@ -37,12 +37,6 @@ final class Ipsum {
   }
 
   static String stripPunctation(String s) {
-    s = s.replace(".", "");
-    s = s.replace(",", "");
-    s = s.replace("!", "");
-    s = s.replace("?", "");
-    s = s.replace(":", "");
-    s = s.replace(";", "");
-    return s;
+    return s.replace(".", "").replace(",", "").replace("!", "").replace("?", "").replace(":", "").replace(";", "");
   }
 }
